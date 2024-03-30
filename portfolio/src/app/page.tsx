@@ -91,7 +91,7 @@ function TspPlot() {
 
             setCounter(counter + 1);
             setTime(new Date());
-        }, 10);
+        }, 20);
 
         return () => clearInterval(interval);
     }, [counter, iterationDatas]);
