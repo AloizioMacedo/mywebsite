@@ -3,8 +3,13 @@
 import styles from "./page.module.css";
 import { Bio } from "./components/Bio";
 import Image from "next/image";
-import Plot from "react-plotly.js";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
+
+const Plot = dynamic(() => import("react-plotly.js"), {
+    loading: () => <div style={{ height: "580px", width: "580px" }}></div>,
+    ssr: false,
+});
 
 type IterationData = {
     x: number[];
@@ -92,13 +97,13 @@ function TspPlot() {
     }, [counter, iterationDatas]);
 
     return (
-        // @ts-ignore
         <Plot
             data={[
                 {
                     x: currentData.x,
                     y: currentData.y,
                     type: "scatter",
+                    // @ts-ignore
                     mode: "markers+lines",
                 },
             ]}
@@ -113,8 +118,8 @@ function TspPlot() {
                     zeroline: false,
                     visible: false,
                 },
-                width: "580",
-                height: "580",
+                width: 580,
+                height: 580,
                 paper_bgcolor: "rgba(255, 255, 255, 0)",
                 plot_bgcolor: "rgba(255, 255, 255, 0)",
             }}
