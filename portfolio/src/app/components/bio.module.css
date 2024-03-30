@@ -1,0 +1,35 @@
+.bioText {
+    font-size: large;
+    display: flex;
+}
+
+.description {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.useCases {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.useCases li {
+    margin: 0 10px;
+}
+
+.technologies {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.technologies li {
+    margin: 0 10px;
+}
