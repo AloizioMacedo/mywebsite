@@ -70,7 +70,8 @@ function TspPlot() {
     const [_, setTime] = useState(new Date());
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/iterations").then((response) =>
+        const selection = Math.round(101 * Math.random());
+        fetch(`/data/res${selection}.json`).then((response) =>
             response
                 .json()
                 .then((data: IterationData[]) => setIterationDatas(data))
