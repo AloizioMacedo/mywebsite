@@ -1,6 +1,7 @@
 import Chip from "@mui/material/Chip";
 import styles from "./bio.module.css";
 import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
 
 export function Bio() {
     return (
@@ -18,6 +19,7 @@ function Description() {
                 Senior SWE currently leading asset teams that develop Data
                 Science solutions.
             </p>
+            <Divider color="grey" variant="middle" style={{ margin: "1rem" }} />
             <p>
                 My background as a PhD in Mathematics enables me to quickly
                 adapt to different problems and contexts.
@@ -40,13 +42,11 @@ function Description() {
                 hands-off management style. As such, I am inextricably involved
                 in the development process, and I firmly believe that this helps
                 to build a team that trusts the solution, the development
-                process and the leadership. I am familiar with a plethora of
-                technologies, including:
+                process and the leadership.
             </p>
-
             <p>
-                Furthermore, the teams I&apos;ve led consist of very different
-                archetypes, including
+                The teams I&apos;ve led consist of very different archetypes,
+                including
             </p>
             <ul>
                 <li>Software Engineers</li>
