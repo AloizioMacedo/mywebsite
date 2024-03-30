@@ -1,0 +1,19 @@
+services:
+    nginx:
+        image: nginx:alpine
+        ports:
+            - "80:80"
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf
+
+    optimizer:
+        build:
+            context: simulated_annealing
+            dockerfile: ./optimizer.Dockerfile
+
+    plotter:
+        build:
+            context: simulated_annealing
+            dockerfile: ./plotter.Dockerfile
+        environment:
+            - PROD=true
