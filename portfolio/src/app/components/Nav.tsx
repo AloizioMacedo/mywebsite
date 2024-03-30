@@ -11,7 +11,7 @@ export function Nav() {
                 <Button href="/portfolio">Portfolio</Button>
             </li>
             <li>
-                <Button href="/trivia">Trivia</Button>
+                <Button href="/photos">Photos</Button>
             </li>
             <li>
                 <Button href="/contact">Contact</Button>

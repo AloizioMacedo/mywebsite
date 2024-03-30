@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Albert_Sans, Inter } from "next/font/google";
+import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import { Nav } from "./components/Nav";
 
