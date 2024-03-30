@@ -20,6 +20,11 @@
     margin: 0 10px;
 }
 
+.techTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
 .technologies {
     display: flex;
     list-style: none;
@@ -32,4 +37,11 @@
 
 .technologies li {
     margin: 0 10px;
+}
+
+.technologies li * {
+    color: white;
+    font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+        "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+        "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }

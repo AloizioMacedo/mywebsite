@@ -1,19 +1,20 @@
+import Button from "@mui/material/Button";
 import styles from "../page.module.css";
 
 export function Nav() {
     return (
         <ul className={styles.nav}>
             <li>
-                <a href="/">Home</a>
+                <Button href="/">Home</Button>
             </li>
             <li>
-                <a href="/portfolio">Portfolio</a>
+                <Button href="/portfolio">Portfolio</Button>
             </li>
             <li>
-                <a href="/trivia">Trivia</a>
+                <Button href="/trivia">Trivia</Button>
             </li>
             <li>
-                <a href="/contact">Contact</a>
+                <Button href="/contact">Contact</Button>
             </li>
         </ul>
     );

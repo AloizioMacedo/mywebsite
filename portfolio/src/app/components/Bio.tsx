@@ -1,4 +1,6 @@
+import Chip from "@mui/material/Chip";
 import styles from "./bio.module.css";
+import Button from "@mui/material/Button";
 
 export function Bio() {
     return (
@@ -23,9 +25,15 @@ function Description() {
                 that I&apos;ve been directly involved with:
             </p>
             <ul className={styles.useCases}>
-                <li>Traffic Control</li>
-                <li>Workforce Scheduling </li>
-                <li>Routing algorithms </li>
+                <li>
+                    <Button variant="outlined">Traffic Control</Button>
+                </li>
+                <li>
+                    <Button variant="outlined">Workforce Scheduling</Button>
+                </li>
+                <li>
+                    <Button variant="outlined">Routing Algorithms</Button>
+                </li>
             </ul>
             <p>
                 I lead by doing and am not very fond of contributing in a
@@ -134,17 +142,35 @@ function OldDescription() {
 function Technologies() {
     return (
         <div>
-            <p>Technologies:</p>
+            <p className={styles.techTitle}>Technologies:</p>
             <ul className={styles.technologies}>
-                <li>Python</li>
-                <li>Rust</li>
-                <li>Git</li>
-                <li>Docker</li>
-                <li>Go</li>
-                <li>Typescript</li>
-                <li>SQL/NoSQL databases</li>
-                <li>AWS</li>
-                <li>Azure</li>
+                <li>
+                    <Chip label="Python" variant="outlined"></Chip>
+                </li>
+                <li>
+                    <Chip label="Rust" variant="outlined"></Chip>
+                </li>
+                <li>
+                    <Chip label="Git" variant="outlined"></Chip>
+                </li>
+                <li>
+                    <Chip label="Docker" variant="outlined"></Chip>
+                </li>
+                <li>
+                    <Chip label="Go" variant="outlined"></Chip>
+                </li>
+                <li>
+                    <Chip label="Typescript" variant="outlined"></Chip>
+                </li>
+                <li>
+                    <Chip label="SQL/NoSQL databases" variant="outlined"></Chip>
+                </li>
+                <li>
+                    <Chip label="AWS" variant="outlined"></Chip>
+                </li>
+                <li>
+                    <Chip label="Azure" variant="outlined"></Chip>
+                </li>
             </ul>
         </div>
     );
