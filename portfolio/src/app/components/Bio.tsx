@@ -2,6 +2,7 @@ import Chip from "@mui/material/Chip";
 import styles from "./bio.module.css";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
 
 export function Bio() {
     return (
@@ -46,22 +47,16 @@ function Description() {
             </p>
             <p>
                 The teams I&apos;ve led consist of very different archetypes,
-                including
+                including Software Engineers, Data Scientists, Data Engineers,
+                Machine Learning Engineers, Mathematicians, Data Analysts etc.
             </p>
-            <ul>
-                <li>Software Engineers</li>
-                <li>Data Scientists</li>
-                <li>Data Engineers</li>
-                <li>Machine Learning Engineers</li>
-                <li>Mathematicians</li>
-                <li>Data Analysts</li>
-            </ul>
             <p>
                 These days, most often I contribute with Data Scientists in
                 assetizing different implementations developed in specific
                 client contexts, making sure to create reusable, efficient and
                 easy-to-use solutions. You can take a look at some of my
-                side-projects at my GitHub: https://github.com/AloizioMacedo.
+                side-projects at{" "}
+                <Link href="https://github.com/AloizioMacedo">my GitHub</Link>.
             </p>
         </div>
     );
