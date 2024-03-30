@@ -1,16 +1,37 @@
+"use client";
+
+import Accordion from "@mui/material/Accordion";
+import styles from "./page.module.css";
+import AccordionSummary from "@mui/material/AccordionSummary";
+
 export default function Portfolio() {
     return (
-        <ul>
-            <TrafficControl />
-            <WorkforceScheduling />
-            <RoutingAlgorithms />
+        <ul className={styles.portfolio}>
+            <Accordion variant="outlined">
+                <AccordionSummary>
+                    <h1>Traffic Control</h1>
+                </AccordionSummary>
+                <TrafficControl />
+            </Accordion>
+            <Accordion variant="outlined">
+                <AccordionSummary>
+                    <h1>Workforce Scheduling</h1>
+                </AccordionSummary>
+                <WorkforceScheduling />
+            </Accordion>
+            <Accordion variant="outlined">
+                <AccordionSummary>
+                    <h1>Routing Algorithms</h1>
+                </AccordionSummary>
+                <RoutingAlgorithms />
+            </Accordion>
         </ul>
     );
 }
 
 function TrafficControl() {
     return (
-        <li>
+        <div>
             <p>
                 My job in traffic control consisted primarily of the
                 implementation of three components:
@@ -45,43 +66,36 @@ function TrafficControl() {
                     </p>
                 </li>
             </ul>
-        </li>
+        </div>
     );
 }
 
 function WorkforceScheduling() {
     return (
-        <li>
-            <p>
-                Workforce Scheduling: Generating optimized schedules given a
-                historic demand timeseries together with its forecasting. The
-                solution includes consideration of ASA (Average Speed of
-                Answer), SLAs (Service Level Agreements), the possibility to
-                postpone demand to future points in time etc. Optimization is
-                phrased in terms of a MILP.
-            </p>
-        </li>
+        <p>
+            Workforce Scheduling: Generating optimized schedules given a
+            historic demand timeseries together with its forecasting. The
+            solution includes consideration of ASA (Average Speed of Answer),
+            SLAs (Service Level Agreements), the possibility to postpone demand
+            to future points in time etc. Optimization is phrased in terms of a
+            MILP.
+        </p>
     );
 }
 
 function RoutingAlgorithms() {
     return (
-        <li>
-            <p>
-                This included different optimization algorithms such as Ant
-                Colony Optimization and simulated annealing for probabilistic
-                and heuristic approaches as well as MILP formulations and some
-                greedy approaches. The problems were further complications of
-                the Traveling Salesman Problem and Vehicle Routing Problem,
-                including constraints such as jobs dependencies, different job
-                durations, availability windows etc.
-            </p>
-            <p>
-                The Ant Colony Optimization was particularly involved and was
-                further improved by a custom low-level implementation of the
-                logic, speeding up the runtime by around 40 times compared to a
-                naive implementation in Python.
-            </p>
-        </li>
+        <p>
+            This included different optimization algorithms such as Ant Colony
+            Optimization and simulated annealing for probabilistic and heuristic
+            approaches as well as MILP formulations and some greedy approaches.
+            The problems were further complications of the Traveling Salesman
+            Problem and Vehicle Routing Problem, including constraints such as
+            jobs dependencies, different job durations, availability windows
+            etc. The Ant Colony Optimization was particularly involved and was
+            further improved by a custom low-level implementation of the logic,
+            speeding up the runtime by around 40 times compared to a naive
+            implementation in Python.
+        </p>
     );
 }
