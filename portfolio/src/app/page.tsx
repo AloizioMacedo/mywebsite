@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
 const Plot = dynamic(() => import("react-plotly.js"), {
-    loading: () => <div style={{ height: "580px", width: "580px" }}></div>,
+    loading: () => <div style={{ height: "400px", width: "400px" }}></div>,
     ssr: false,
 });
 
@@ -118,8 +118,9 @@ function TspPlot() {
                     zeroline: false,
                     visible: false,
                 },
-                width: 580,
-                height: 580,
+                margin: { t: 20, b: 20, l: 20, r: 20 },
+                width: 400,
+                height: 400,
                 paper_bgcolor: "rgba(255, 255, 255, 0)",
                 plot_bgcolor: "rgba(255, 255, 255, 0)",
             }}
