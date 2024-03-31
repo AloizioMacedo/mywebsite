@@ -105,6 +105,7 @@ function TrafficControl() {
                             width={320}
                             height={320}
                             unoptimized
+                            priority
                         ></Image>
                     </div>
                 </li>
@@ -124,6 +125,7 @@ function TrafficControl() {
                             width={320}
                             height={320}
                             unoptimized
+                            priority
                         ></Image>
                     </div>
                 </li>
@@ -141,7 +143,7 @@ function TrafficControl() {
                             src="/diagram.png"
                             alt="System Structure"
                             width={320}
-                            height={264.3}
+                            height={264}
                             unoptimized
                         ></Image>
                     </div>

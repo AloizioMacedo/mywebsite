@@ -17,9 +17,9 @@
 }
 
 .image {
-    min-width: 424;
-    width: 424;
-    height: 424;
+    min-width: 320;
+    width: 320;
+    height: auto;
     margin-left: 100;
 }
 
@@ -34,6 +34,8 @@
     }
 
     .image {
-        min-width: 424;
+        width: 320;
+        height: auto;
+        min-width: 320;
     }
 }
