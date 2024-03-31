@@ -8,8 +8,8 @@ function getPlotSize() {
         return 400;
     }
 
-    const isMobile = window.innerWidth >= 700;
-    return isMobile ? 400 : 300;
+    const isMobile = window.innerWidth <= 700;
+    return isMobile ? 300 : 400;
 }
 
 const Plot = dynamic(() => import("react-plotly.js"), {
