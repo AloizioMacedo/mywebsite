@@ -13,9 +13,31 @@ import { Suspense, useState } from "react";
 
 export default function Portfolio() {
     return (
-        <Suspense>
+        <Suspense fallback={<FallbackPortfolio />}>
             <InnerPortfolio />
         </Suspense>
+    );
+}
+
+function FallbackPortfolio() {
+    return (
+        <ul className={styles.portfolio}>
+            <Accordion variant="outlined" className={styles.accordion}>
+                <AccordionSummary>
+                    <h1>Traffic Control</h1>
+                </AccordionSummary>
+            </Accordion>
+            <Accordion variant="outlined" className={styles.accordion}>
+                <AccordionSummary>
+                    <h1>Workforce Scheduling</h1>
+                </AccordionSummary>
+            </Accordion>
+            <Accordion variant="outlined" className={styles.accordion}>
+                <AccordionSummary>
+                    <h1>Routing Algorithms</h1>
+                </AccordionSummary>
+            </Accordion>
+        </ul>
     );
 }
 
