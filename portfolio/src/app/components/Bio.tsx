@@ -31,13 +31,19 @@ function Description() {
             </p>
             <ul className={styles.useCases}>
                 <li>
-                    <Button variant="outlined">Traffic Control</Button>
+                    <Button variant="outlined" href="/portfolio?tc=true">
+                        Traffic Control
+                    </Button>
                 </li>
                 <li>
-                    <Button variant="outlined">Workforce Scheduling</Button>
+                    <Button variant="outlined" href="/portfolio?ws=true">
+                        Workforce Scheduling
+                    </Button>
                 </li>
                 <li>
-                    <Button variant="outlined">Routing Algorithms</Button>
+                    <Button variant="outlined" href="/portfolio?ra=true">
+                        Routing Algorithms
+                    </Button>
                 </li>
             </ul>
             <p>

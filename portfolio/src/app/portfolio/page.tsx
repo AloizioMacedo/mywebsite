@@ -6,23 +6,29 @@ import styles from "./page.module.css";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Image from "next/image";
 import TrafficPlot from "../components/TspPlot";
+import { useSearchParams } from "next/navigation";
 
 export default function Portfolio() {
+    const searchParams = useSearchParams();
+    const tc = searchParams.get("tc");
+    const ws = searchParams.get("ws");
+    const ra = searchParams.get("ra");
+
     return (
         <ul className={styles.portfolio}>
-            <Accordion variant="outlined">
+            <Accordion variant="outlined" defaultExpanded={!!tc}>
                 <AccordionSummary>
                     <h1>Traffic Control</h1>
                 </AccordionSummary>
                 <TrafficControl />
             </Accordion>
-            <Accordion variant="outlined">
+            <Accordion variant="outlined" defaultExpanded={!!ws}>
                 <AccordionSummary>
                     <h1>Workforce Scheduling</h1>
                 </AccordionSummary>
                 <WorkforceScheduling />
             </Accordion>
-            <Accordion variant="outlined">
+            <Accordion variant="outlined" defaultExpanded={!!ra}>
                 <AccordionSummary>
                     <h1>Routing Algorithms</h1>
                 </AccordionSummary>
