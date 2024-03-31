@@ -212,20 +212,21 @@ function RoutingAlgorithms() {
                 visualization of iterations towards a solution of the classical
                 Traveling Salesman Problem via a simulated annealing algorithm
                 written in Rust and plotted with Plotly, where the state machine
-                transitions of the procedure correspond to
+                transitions of the procedure correspond to{" "}
                 <Link
                     href="https://en.wikipedia.org/wiki/2-opt"
                     target="_blank"
                 >
-                    2-opts.
+                    2-opts
                 </Link>
-                The source code is in
+                . The source code is in{" "}
                 <Link
                     href="https://github.com/AloizioMacedo/simulated-annealing"
                     target="_blank"
                 >
-                    this repository.
+                    this repository
                 </Link>
+                .
             </p>
             <div style={{ display: "flex", justifyContent: "center" }}>
                 <TrafficPlot loop={true} />
