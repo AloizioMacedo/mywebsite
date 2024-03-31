@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import styles from "../page.module.css";
 
-export function Nav() {
+export default function Nav() {
     return (
         <ul className={styles.nav}>
             <li>
@@ -12,9 +12,6 @@ export function Nav() {
             </li>
             <li>
                 <Button href="/photos">Photos</Button>
-            </li>
-            <li>
-                <Button href="/contact">Contact</Button>
             </li>
         </ul>
     );

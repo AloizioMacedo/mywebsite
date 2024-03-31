@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
-import { Nav } from "./components/Nav";
+import Nav from "./components/Nav";
+import SpeedDial from "./components/SpeedDial";
 
 // const inter = Inter({ subsets: ["latin"] });
 const albertSans = Albert_Sans({ subsets: ["latin"] });
@@ -21,6 +22,7 @@ export default function RootLayout({
             <body className={albertSans.className}>
                 <Nav />
                 {children}
+                <SpeedDial />
             </body>
         </html>
     );
