@@ -1,8 +1,17 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
+function getPlotSize() {
+    const isMobile = window.innerHeight <= 700;
+    return isMobile ? 400 : 300;
+}
+
 const Plot = dynamic(() => import("react-plotly.js"), {
-    loading: () => <div style={{ height: "400px", width: "400px" }}></div>,
+    loading: () => (
+        <div style={{ height: getPlotSize(), width: getPlotSize() }}></div>
+    ),
     ssr: false,
 });
 
@@ -61,6 +70,8 @@ export default function TspPlot({ loop }: { loop: boolean }) {
         return () => clearInterval(interval);
     }, [counter, iterationDatas, loop]);
 
+    const { innerWidth: windowWidth } = window;
+
     return (
         <Plot
             data={[
@@ -84,10 +95,11 @@ export default function TspPlot({ loop }: { loop: boolean }) {
                     visible: false,
                 },
                 margin: { t: 20, b: 20, l: 20, r: 20 },
-                width: 400,
-                height: 400,
+                width: getPlotSize(),
+                height: getPlotSize(),
                 paper_bgcolor: "rgba(255, 255, 255, 0)",
                 plot_bgcolor: "rgba(255, 255, 255, 0)",
+                autosize: true,
             }}
             config={{
                 displayModeBar: false,
