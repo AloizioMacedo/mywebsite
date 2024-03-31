@@ -101,6 +101,15 @@ function TrafficControl() {
                         of street lanes considering different KPIs that
                         incorporate these metrics.
                     </p>
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                        <Image
+                            src="/isolatedintersection.gif"
+                            alt="Traffic Flow Optimization"
+                            width={400}
+                            height={400}
+                            unoptimized
+                        ></Image>
+                    </div>
                 </li>
                 <li>
                     <p>
@@ -114,9 +123,10 @@ function TrafficControl() {
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Image
                             src="/trafficsim.gif"
-                            alt="Traffic Simulation"
+                            alt="Offset Optimization"
                             width={400}
                             height={400}
+                            unoptimized
                         ></Image>
                     </div>
                 </li>
