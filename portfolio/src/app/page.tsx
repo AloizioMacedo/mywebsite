@@ -21,6 +21,7 @@ export default function Home() {
                             alt="Aloizio"
                             width={350}
                             height={350}
+                            priority
                         />
                     </div>
                     <TspPlot loop={false} />
