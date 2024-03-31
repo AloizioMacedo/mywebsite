@@ -1,6 +1,7 @@
 "use client";
 
 import Accordion from "@mui/material/Accordion";
+import Link from "@mui/material/Link";
 import styles from "./page.module.css";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Image from "next/image";
@@ -108,6 +109,26 @@ function RoutingAlgorithms() {
                 was particularly involved and was further improved by a custom
                 low-level implementation of the logic, speeding up the runtime
                 by around 40 times compared to a naive implementation in Python.
+            </p>
+            <p>
+                The plot below (which can also be seen in the homepage) is a
+                visualization of iterations towards a solution of the classical
+                Traveling Salesman Problem via a simulated annealing algorithm
+                written in Rust and plotted with Plotly, where the state machine
+                transitions of the procedure correspond to
+                <Link
+                    href="https://en.wikipedia.org/wiki/2-opt"
+                    target="_blank"
+                >
+                    2-opts.
+                </Link>
+                The source code is in
+                <Link
+                    href="https://github.com/AloizioMacedo/simulated-annealing"
+                    target="_blank"
+                >
+                    this repository.
+                </Link>
             </p>
             <div style={{ display: "flex", justifyContent: "center" }}>
                 <TrafficPlot loop={true} />
