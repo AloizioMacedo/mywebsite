@@ -26,16 +26,25 @@ function FallbackPortfolio() {
                 <AccordionSummary>
                     <h1>Traffic Control</h1>
                 </AccordionSummary>
+                <AccordionDetails>
+                    <TrafficControl />
+                </AccordionDetails>
             </Accordion>
             <Accordion variant="outlined" className={styles.accordion}>
                 <AccordionSummary>
                     <h1>Workforce Scheduling</h1>
                 </AccordionSummary>
+                <AccordionDetails>
+                    <WorkforceScheduling />
+                </AccordionDetails>
             </Accordion>
             <Accordion variant="outlined" className={styles.accordion}>
                 <AccordionSummary>
                     <h1>Routing Algorithms</h1>
                 </AccordionSummary>
+                <AccordionDetails>
+                    <RoutingAlgorithms />
+                </AccordionDetails>
             </Accordion>
         </ul>
     );
