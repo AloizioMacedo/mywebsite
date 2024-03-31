@@ -3,6 +3,7 @@
 import Accordion from "@mui/material/Accordion";
 import styles from "./page.module.css";
 import AccordionSummary from "@mui/material/AccordionSummary";
+import Image from "next/image";
 
 export default function Portfolio() {
     return (
@@ -55,7 +56,16 @@ function TrafficControl() {
                         attribution of the offsets based on the vanishing of an
                         integral 1-form on the cycles of the grid.
                     </p>
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                        <Image
+                            src="/trafficsim.gif"
+                            alt="Traffic Simulation"
+                            width={400}
+                            height={400}
+                        ></Image>
+                    </div>
                 </li>
+
                 <li>
                     <p>
                         Integrating this as a service to connect with other
