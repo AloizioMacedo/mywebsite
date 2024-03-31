@@ -45,6 +45,7 @@ function Description() {
                 to build a team that trusts the solution, the development
                 process and the leadership.
             </p>
+            <Divider color="grey" variant="middle" style={{ margin: "1rem" }} />
             <p>
                 The teams I&apos;ve led consist of very different archetypes,
                 including Software Engineers, Data Scientists, Data Engineers,
@@ -54,9 +55,7 @@ function Description() {
                 These days, most often I contribute with Data Scientists in
                 assetizing different implementations developed in specific
                 client contexts, making sure to create reusable, efficient and
-                easy-to-use solutions. You can take a look at some of my
-                side-projects at{" "}
-                <Link href="https://github.com/AloizioMacedo">my GitHub</Link>.
+                easy-to-use solutions.
             </p>
         </div>
     );
