@@ -141,7 +141,7 @@ function TrafficControl() {
                             src="/diagram.png"
                             alt="System Structure"
                             width={320}
-                            height={260}
+                            height={264.3}
                             unoptimized
                         ></Image>
                     </div>
