@@ -94,24 +94,27 @@ function TrafficControl() {
             </p>
 
             <ul>
-                <li>
+                <li
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                >
                     <p>
                         A heuristic logic for dynamically changing stages
                         durations of traffic light based on flow and saturation
                         of street lanes considering different KPIs that
                         incorporate these metrics.
                     </p>
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                        <Image
-                            src="/isolatedintersection.gif"
-                            alt="Traffic Flow Optimization"
-                            width={400}
-                            height={400}
-                            unoptimized
-                        ></Image>
-                    </div>
+                    <Image
+                        src="/isolatedintersection.gif"
+                        alt="Traffic Flow Optimization"
+                        width={424}
+                        height={424}
+                        unoptimized
+                        style={{ minWidth: 424 }}
+                    ></Image>
                 </li>
-                <li>
+                <li
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                >
                     <p>
                         An intricate MILP optimization model for optimizing
                         traffic light offsets relative to each other to create
@@ -120,18 +123,19 @@ function TrafficControl() {
                         attribution of the offsets based on the vanishing of an
                         integral 1-form on the cycles of the grid.
                     </p>
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                        <Image
-                            src="/trafficsim.gif"
-                            alt="Offset Optimization"
-                            width={400}
-                            height={400}
-                            unoptimized
-                        ></Image>
-                    </div>
+                    <Image
+                        src="/trafficsim.gif"
+                        alt="Offset Optimization"
+                        width={424}
+                        height={424}
+                        unoptimized
+                        style={{ minWidth: 424 }}
+                    ></Image>
                 </li>
 
-                <li>
+                <li
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                >
                     <p>
                         Integrating this as a service to connect with other
                         services, including a front-end that is used by
@@ -139,6 +143,14 @@ function TrafficControl() {
                         connect to the physical traffic controllers spread
                         around the city of Vitória - ES.
                     </p>
+                    <Image
+                        src="/diagram.png"
+                        alt="System Structure"
+                        width={521.6}
+                        height={424}
+                        unoptimized
+                        style={{ minWidth: 521.6 }}
+                    ></Image>
                 </li>
             </ul>
         </div>
