@@ -7,6 +7,15 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Image from "next/image";
 import TrafficPlot from "../components/TspPlot";
 import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+
+function getRoute(isActive: { tc: boolean; ws: boolean; ra: boolean }) {
+    const tc = isActive.tc ? "tc=true" : "";
+    const ws = isActive.ws ? "ws=true" : "";
+    const ra = isActive.ra ? "ra=true" : "";
+
+    return `/portfolio?${[tc, ws, ra].filter((i) => !!i).join("&")}`;
+}
 
 export default function Portfolio() {
     const searchParams = useSearchParams();
@@ -14,21 +23,50 @@ export default function Portfolio() {
     const ws = searchParams.get("ws");
     const ra = searchParams.get("ra");
 
+    const router = useRouter();
+
+    const isActive = {
+        tc: !!tc,
+        ws: !!ws,
+        ra: !!ra,
+    };
+
     return (
         <ul className={styles.portfolio}>
-            <Accordion variant="outlined" defaultExpanded={!!tc}>
+            <Accordion
+                variant="outlined"
+                defaultExpanded={!!tc}
+                onChange={(_, exp) => {
+                    isActive.tc = exp;
+                    router.push(getRoute(isActive));
+                }}
+            >
                 <AccordionSummary>
                     <h1>Traffic Control</h1>
                 </AccordionSummary>
                 <TrafficControl />
             </Accordion>
-            <Accordion variant="outlined" defaultExpanded={!!ws}>
+            <Accordion
+                variant="outlined"
+                defaultExpanded={!!ws}
+                onChange={(_, exp) => {
+                    isActive.ws = exp;
+                    router.push(getRoute(isActive));
+                }}
+            >
                 <AccordionSummary>
                     <h1>Workforce Scheduling</h1>
                 </AccordionSummary>
                 <WorkforceScheduling />
             </Accordion>
-            <Accordion variant="outlined" defaultExpanded={!!ra}>
+            <Accordion
+                variant="outlined"
+                defaultExpanded={!!ra}
+                onChange={(_, exp) => {
+                    isActive.ra = exp;
+                    router.push(getRoute(isActive));
+                }}
+            >
                 <AccordionSummary>
                     <h1>Routing Algorithms</h1>
                 </AccordionSummary>
