@@ -26,15 +26,20 @@ function InnerPortfolio() {
     const searchParams = useSearchParams();
     let panel = searchParams.get("panel");
 
-    if (panel != null && panel != expanded) {
-        setExpanded(panel);
+    let panelToExpand = panel ? panel : false;
+
+    if (expanded != panelToExpand) {
+        setExpanded(panelToExpand);
     }
 
     const handleChange =
         (panel: string) =>
         (event: React.SyntheticEvent, isExpanded: boolean) => {
-            setExpanded(isExpanded ? panel : false);
-            router.push(`/portfolio?panel=${panel}`);
+            if (isExpanded) {
+                router.push(`/portfolio?panel=${panel}`);
+            } else {
+                router.push(`/portfolio`);
+            }
         };
 
     return (
