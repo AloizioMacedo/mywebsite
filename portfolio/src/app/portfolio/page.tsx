@@ -115,8 +115,8 @@ function TrafficControl() {
                         <Image
                             src="/isolatedintersection.webp"
                             alt="Traffic Flow Optimization"
-                            width={424}
-                            height={424}
+                            width={320}
+                            height={320}
                             unoptimized
                         ></Image>
                     </div>
@@ -134,8 +134,8 @@ function TrafficControl() {
                         <Image
                             src="/trafficsim.webp"
                             alt="Offset Optimization"
-                            width={424}
-                            height={424}
+                            width={320}
+                            height={320}
                             unoptimized
                         ></Image>
                     </div>
@@ -153,8 +153,8 @@ function TrafficControl() {
                         <Image
                             src="/diagram.png"
                             alt="System Structure"
-                            width={521.6}
-                            height={424}
+                            width={320}
+                            height={260}
                             unoptimized
                         ></Image>
                     </div>

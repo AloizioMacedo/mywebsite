@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 function getPlotSize() {
-    const isMobile = window.innerHeight <= 700;
+    if (typeof window === "undefined") {
+        return 400;
+    }
+
+    const isMobile = window.innerWidth >= 700;
     return isMobile ? 400 : 300;
 }
 
@@ -70,7 +74,7 @@ export default function TspPlot({ loop }: { loop: boolean }) {
         return () => clearInterval(interval);
     }, [counter, iterationDatas, loop]);
 
-    const { innerWidth: windowWidth } = window;
+    const size = getPlotSize();
 
     return (
         <Plot
@@ -95,8 +99,8 @@ export default function TspPlot({ loop }: { loop: boolean }) {
                     visible: false,
                 },
                 margin: { t: 20, b: 20, l: 20, r: 20 },
-                width: getPlotSize(),
-                height: getPlotSize(),
+                width: size,
+                height: size,
                 paper_bgcolor: "rgba(255, 255, 255, 0)",
                 plot_bgcolor: "rgba(255, 255, 255, 0)",
                 autosize: true,
