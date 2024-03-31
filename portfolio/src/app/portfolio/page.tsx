@@ -104,35 +104,24 @@ function TrafficControl() {
             </p>
 
             <ul>
-                <li
-                    style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        margin: "10px 0px",
-                    }}
-                >
+                <li className={styles.trafficControlItem}>
                     <p>
                         A heuristic logic for dynamically changing stages
                         durations of traffic light based on flow and saturation
                         of street lanes considering different KPIs that
                         incorporate these metrics.
                     </p>
-                    <Image
-                        src="/isolatedintersection.webp"
-                        alt="Traffic Flow Optimization"
-                        width={424}
-                        height={424}
-                        unoptimized
-                        style={{ minWidth: 424, marginLeft: 100 }}
-                    ></Image>
+                    <div className={styles.image}>
+                        <Image
+                            src="/isolatedintersection.webp"
+                            alt="Traffic Flow Optimization"
+                            width={424}
+                            height={424}
+                            unoptimized
+                        ></Image>
+                    </div>
                 </li>
-                <li
-                    style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        margin: "10px 0px",
-                    }}
-                >
+                <li className={styles.trafficControlItem}>
                     <p>
                         An intricate MILP optimization model for optimizing
                         traffic light offsets relative to each other to create
@@ -141,23 +130,18 @@ function TrafficControl() {
                         attribution of the offsets based on the vanishing of an
                         integral 1-form on the cycles of the grid.
                     </p>
-                    <Image
-                        src="/trafficsim.webp"
-                        alt="Offset Optimization"
-                        width={424}
-                        height={424}
-                        unoptimized
-                        style={{ minWidth: 424, marginLeft: 100 }}
-                    ></Image>
+                    <div className={styles.image}>
+                        <Image
+                            src="/trafficsim.webp"
+                            alt="Offset Optimization"
+                            width={424}
+                            height={424}
+                            unoptimized
+                        ></Image>
+                    </div>
                 </li>
 
-                <li
-                    style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        margin: "10px 0px",
-                    }}
-                >
+                <li className={styles.trafficControlItem}>
                     <p>
                         Integrating this as a service to connect with other
                         services, including a front-end that is used by
@@ -165,14 +149,15 @@ function TrafficControl() {
                         connect to the physical traffic controllers spread
                         around the city of Vitória - ES.
                     </p>
-                    <Image
-                        src="/diagram.png"
-                        alt="System Structure"
-                        width={521.6}
-                        height={424}
-                        unoptimized
-                        style={{ minWidth: 521.6, marginLeft: 100 }}
-                    ></Image>
+                    <div className={styles.image}>
+                        <Image
+                            src="/diagram.png"
+                            alt="System Structure"
+                            width={521.6}
+                            height={424}
+                            unoptimized
+                        ></Image>
+                    </div>
                 </li>
             </ul>
         </div>
