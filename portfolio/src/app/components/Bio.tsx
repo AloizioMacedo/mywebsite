@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
 
-export function Bio() {
+export default function Bio() {
     return (
         <div className={styles.bioText}>
             <Description />
