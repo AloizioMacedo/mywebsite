@@ -118,7 +118,7 @@ function TrafficControl() {
                         incorporate these metrics.
                     </p>
                     <Image
-                        src="/isolatedintersection.gif"
+                        src="/isolatedintersection.webp"
                         alt="Traffic Flow Optimization"
                         width={424}
                         height={424}
@@ -142,7 +142,7 @@ function TrafficControl() {
                         integral 1-form on the cycles of the grid.
                     </p>
                     <Image
-                        src="/trafficsim.gif"
+                        src="/trafficsim.webp"
                         alt="Offset Optimization"
                         width={424}
                         height={424}
