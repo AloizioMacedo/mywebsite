@@ -4,6 +4,7 @@ import Accordion from "@mui/material/Accordion";
 import styles from "./page.module.css";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Image from "next/image";
+import TrafficPlot from "../components/TspPlot";
 
 export default function Portfolio() {
     return (
@@ -95,17 +96,22 @@ function WorkforceScheduling() {
 
 function RoutingAlgorithms() {
     return (
-        <p>
-            This included different optimization algorithms such as Ant Colony
-            Optimization and simulated annealing for probabilistic and heuristic
-            approaches as well as MILP formulations and some greedy approaches.
-            The problems were further complications of the Traveling Salesman
-            Problem and Vehicle Routing Problem, including constraints such as
-            jobs dependencies, different job durations, availability windows
-            etc. The Ant Colony Optimization was particularly involved and was
-            further improved by a custom low-level implementation of the logic,
-            speeding up the runtime by around 40 times compared to a naive
-            implementation in Python.
-        </p>
+        <div>
+            <p>
+                This included different optimization algorithms such as Ant
+                Colony Optimization and simulated annealing for probabilistic
+                and heuristic approaches as well as MILP formulations and some
+                greedy approaches. The problems were further complications of
+                the Traveling Salesman Problem and Vehicle Routing Problem,
+                including constraints such as jobs dependencies, different job
+                durations, availability windows etc. The Ant Colony Optimization
+                was particularly involved and was further improved by a custom
+                low-level implementation of the logic, speeding up the runtime
+                by around 40 times compared to a naive implementation in Python.
+            </p>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+                <TrafficPlot loop={true} />
+            </div>
+        </div>
     );
 }

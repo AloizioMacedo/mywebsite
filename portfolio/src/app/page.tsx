@@ -23,7 +23,7 @@ export default function Home() {
                             height={350}
                         />
                     </div>
-                    <TspPlot />
+                    <TspPlot loop={false} />
                 </div>
                 <div className={styles.tspPlot}></div>
                 <Bio />

@@ -11,7 +11,7 @@ type IterationData = {
     y: number[];
 };
 
-export default function TspPlot() {
+export default function TspPlot({ loop }: { loop: boolean }) {
     const initialIterationDatas: IterationData[] = [];
     const [iterationDatas, setIterationDatas] = useState(initialIterationDatas);
     const [counter, setCounter] = useState(0);
@@ -35,7 +35,16 @@ export default function TspPlot() {
 
     useEffect(() => {
         const interval = setInterval(() => {
+            if (iterationDatas.length == 0) {
+                return;
+            }
+
             if (counter >= iterationDatas.length) {
+                if (loop) {
+                    const sleep = new Promise((r) => setTimeout(r, 2000));
+                    sleep.then(() => setCounter(0));
+                }
+
                 return;
             }
 
@@ -50,7 +59,7 @@ export default function TspPlot() {
         }, 20);
 
         return () => clearInterval(interval);
-    }, [counter, iterationDatas]);
+    }, [counter, iterationDatas, loop]);
 
     return (
         <Plot
