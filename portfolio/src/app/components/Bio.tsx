@@ -18,7 +18,9 @@ function Description() {
         <div className={styles.description}>
             <p>
                 Senior SWE at{" "}
-                <Link href="https://www.quantumblack.com/">QuantumBlack</Link>{" "}
+                <Link href="https://www.mckinsey.com/capabilities/quantumblack/how-we-help-clients">
+                    QuantumBlack
+                </Link>{" "}
                 currently leading asset teams that develop Data Science
                 solutions.
             </p>
