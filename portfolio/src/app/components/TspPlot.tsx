@@ -85,6 +85,7 @@ export default function TspPlot({ loop }: { loop: boolean }) {
                     type: "scatter",
                     // @ts-ignore
                     mode: "markers+lines",
+                    hoverinfo: "none",
                 },
             ]}
             layout={{
@@ -104,9 +105,11 @@ export default function TspPlot({ loop }: { loop: boolean }) {
                 paper_bgcolor: "rgba(255, 255, 255, 0)",
                 plot_bgcolor: "rgba(255, 255, 255, 0)",
                 autosize: true,
+                dragmode: false,
             }}
             config={{
                 displayModeBar: false,
+                staticPlot: true,
             }}
         />
     );
