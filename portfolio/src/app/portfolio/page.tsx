@@ -4,6 +4,7 @@ import Accordion from "@mui/material/Accordion";
 import Link from "@mui/material/Link";
 import styles from "./page.module.css";
 import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
 import Image from "next/image";
 import TrafficPlot from "../components/TspPlot";
 import { useSearchParams } from "next/navigation";
@@ -49,11 +50,14 @@ function InnerPortfolio() {
                     isActive.tc = exp;
                     router.push(getRoute(isActive));
                 }}
+                className={styles.accordion}
             >
                 <AccordionSummary>
                     <h1>Traffic Control</h1>
                 </AccordionSummary>
-                <TrafficControl />
+                <AccordionDetails>
+                    <TrafficControl />
+                </AccordionDetails>
             </Accordion>
             <Accordion
                 variant="outlined"
@@ -62,11 +66,14 @@ function InnerPortfolio() {
                     isActive.ws = exp;
                     router.push(getRoute(isActive));
                 }}
+                className={styles.accordion}
             >
                 <AccordionSummary>
                     <h1>Workforce Scheduling</h1>
                 </AccordionSummary>
-                <WorkforceScheduling />
+                <AccordionDetails>
+                    <WorkforceScheduling />
+                </AccordionDetails>
             </Accordion>
             <Accordion
                 variant="outlined"
@@ -75,11 +82,14 @@ function InnerPortfolio() {
                     isActive.ra = exp;
                     router.push(getRoute(isActive));
                 }}
+                className={styles.accordion}
             >
                 <AccordionSummary>
                     <h1>Routing Algorithms</h1>
                 </AccordionSummary>
-                <RoutingAlgorithms />
+                <AccordionDetails>
+                    <RoutingAlgorithms />
+                </AccordionDetails>
             </Accordion>
         </ul>
     );
@@ -95,7 +105,11 @@ function TrafficControl() {
 
             <ul>
                 <li
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        margin: "10px 0px",
+                    }}
                 >
                     <p>
                         A heuristic logic for dynamically changing stages
@@ -113,7 +127,11 @@ function TrafficControl() {
                     ></Image>
                 </li>
                 <li
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        margin: "10px 0px",
+                    }}
                 >
                     <p>
                         An intricate MILP optimization model for optimizing
@@ -134,7 +152,11 @@ function TrafficControl() {
                 </li>
 
                 <li
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        margin: "10px 0px",
+                    }}
                 >
                     <p>
                         Integrating this as a service to connect with other

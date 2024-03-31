@@ -1,3 +1,7 @@
-.portfolio * {
+.portfolio {
+    margin: 10px;
+}
+
+.accordion {
     margin: 10px;
 }
