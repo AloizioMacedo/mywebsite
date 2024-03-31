@@ -17,8 +17,10 @@ function Description() {
     return (
         <div className={styles.description}>
             <p>
-                Senior SWE currently leading asset teams that develop Data
-                Science solutions.
+                Senior SWE at{" "}
+                <Link href="https://www.quantumblack.com/">QuantumBlack</Link>{" "}
+                currently leading asset teams that develop Data Science
+                solutions.
             </p>
             <Divider color="grey" variant="middle" style={{ margin: "1rem" }} />
             <p>
