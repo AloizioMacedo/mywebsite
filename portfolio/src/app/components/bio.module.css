@@ -46,3 +46,12 @@
         "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
         "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }
+
+/* Mobile */
+@media (max-width: 700px) {
+    .bioText {
+        font-size: large;
+        display: flex;
+        flex-direction: column;
+    }
+}
