@@ -9,15 +9,7 @@ import Image from "next/image";
 import TrafficPlot from "../components/TspPlot";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { Suspense } from "react";
-
-function getRoute(isActive: { tc: boolean; ws: boolean; ra: boolean }) {
-    const tc = isActive.tc ? "tc=true" : "";
-    const ws = isActive.ws ? "ws=true" : "";
-    const ra = isActive.ra ? "ra=true" : "";
-
-    return `/portfolio?${[tc, ws, ra].filter((i) => !!i).join("&")}`;
-}
+import { Suspense, useState } from "react";
 
 export default function Portfolio() {
     return (
@@ -28,28 +20,29 @@ export default function Portfolio() {
 }
 
 function InnerPortfolio() {
-    const searchParams = useSearchParams();
-    const tc = searchParams.get("tc");
-    const ws = searchParams.get("ws");
-    const ra = searchParams.get("ra");
+    const [expanded, setExpanded] = useState<string | false>(false);
 
     const router = useRouter();
+    const searchParams = useSearchParams();
+    let panel = searchParams.get("panel");
 
-    const isActive = {
-        tc: !!tc,
-        ws: !!ws,
-        ra: !!ra,
-    };
+    if (panel != null && panel != expanded) {
+        setExpanded(panel);
+    }
+
+    const handleChange =
+        (panel: string) =>
+        (event: React.SyntheticEvent, isExpanded: boolean) => {
+            setExpanded(isExpanded ? panel : false);
+            router.push(`/portfolio?panel=${panel}`);
+        };
 
     return (
         <ul className={styles.portfolio}>
             <Accordion
                 variant="outlined"
-                defaultExpanded={!!tc}
-                onChange={(_, exp) => {
-                    isActive.tc = exp;
-                    router.push(getRoute(isActive));
-                }}
+                expanded={expanded == "traffic-control"}
+                onChange={handleChange("traffic-control")}
                 className={styles.accordion}
             >
                 <AccordionSummary>
@@ -61,11 +54,8 @@ function InnerPortfolio() {
             </Accordion>
             <Accordion
                 variant="outlined"
-                defaultExpanded={!!ws}
-                onChange={(_, exp) => {
-                    isActive.ws = exp;
-                    router.push(getRoute(isActive));
-                }}
+                expanded={expanded == "workforce-scheduling"}
+                onChange={handleChange("workforce-scheduling")}
                 className={styles.accordion}
             >
                 <AccordionSummary>
@@ -77,11 +67,8 @@ function InnerPortfolio() {
             </Accordion>
             <Accordion
                 variant="outlined"
-                defaultExpanded={!!ra}
-                onChange={(_, exp) => {
-                    isActive.ra = exp;
-                    router.push(getRoute(isActive));
-                }}
+                expanded={expanded == "routing-algorithms"}
+                onChange={handleChange("routing-algorithms")}
                 className={styles.accordion}
             >
                 <AccordionSummary>
