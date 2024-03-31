@@ -8,6 +8,7 @@ import Image from "next/image";
 import TrafficPlot from "../components/TspPlot";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { Suspense } from "react";
 
 function getRoute(isActive: { tc: boolean; ws: boolean; ra: boolean }) {
     const tc = isActive.tc ? "tc=true" : "";
@@ -18,6 +19,14 @@ function getRoute(isActive: { tc: boolean; ws: boolean; ra: boolean }) {
 }
 
 export default function Portfolio() {
+    return (
+        <Suspense>
+            <InnerPortfolio />
+        </Suspense>
+    );
+}
+
+function InnerPortfolio() {
     const searchParams = useSearchParams();
     const tc = searchParams.get("tc");
     const ws = searchParams.get("ws");
