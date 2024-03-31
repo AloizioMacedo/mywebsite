@@ -1,7 +1,11 @@
 .portfolio {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .accordion {
     margin: 10px;
+    max-width: 1200px;
 }

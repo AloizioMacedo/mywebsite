@@ -123,7 +123,7 @@ function TrafficControl() {
                         width={424}
                         height={424}
                         unoptimized
-                        style={{ minWidth: 424 }}
+                        style={{ minWidth: 424, marginLeft: 100 }}
                     ></Image>
                 </li>
                 <li
@@ -147,7 +147,7 @@ function TrafficControl() {
                         width={424}
                         height={424}
                         unoptimized
-                        style={{ minWidth: 424 }}
+                        style={{ minWidth: 424, marginLeft: 100 }}
                     ></Image>
                 </li>
 
@@ -161,7 +161,7 @@ function TrafficControl() {
                     <p>
                         Integrating this as a service to connect with other
                         services, including a front-end that is used by
-                        government agents as well as the other services that
+                        government agents as well as the other components that
                         connect to the physical traffic controllers spread
                         around the city of Vitória - ES.
                     </p>
@@ -171,7 +171,7 @@ function TrafficControl() {
                         width={521.6}
                         height={424}
                         unoptimized
-                        style={{ minWidth: 521.6 }}
+                        style={{ minWidth: 521.6, marginLeft: 100 }}
                     ></Image>
                 </li>
             </ul>
