@@ -23,6 +23,21 @@ export default function RootLayout({
                 <Nav />
                 {children}
                 <SpeedDial />
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        fontSize: "small",
+                        opacity: 0.2,
+                    }}
+                >
+                    <a
+                        href="https://www.flaticon.com/free-icons/letter-a"
+                        title="letter a icons"
+                    >
+                        Letter a icons created by Md Tanvirul Haque - Flaticon
+                    </a>
+                </div>
             </body>
         </html>
     );
