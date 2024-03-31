@@ -13,6 +13,7 @@ const actions = [
             <Link
                 href="https://www.linkedin.com/in/aloizio-macedo/"
                 style={{ display: "flex" }}
+                target="_blank"
             >
                 <LinkedInIcon />
             </Link>
@@ -24,6 +25,7 @@ const actions = [
             <Link
                 href="https://github.com/AloizioMacedo"
                 style={{ display: "flex" }}
+                target="_blank"
             >
                 <GitHubIcon />
             </Link>
