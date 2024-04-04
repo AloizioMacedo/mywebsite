@@ -128,7 +128,7 @@ function TrafficControl() {
 
             <ul>
                 <li className={styles.trafficControlItem}>
-                    <p>
+                    <p className={styles.trafficControlDescription}>
                         A heuristic logic for dynamically changing stages
                         durations of traffic light based on flow and saturation
                         of street lanes considering different KPIs that
