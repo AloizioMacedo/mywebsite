@@ -122,17 +122,33 @@ function TrafficControl() {
     return (
         <div>
             <p>
-                My job in traffic control consisted primarily of the
-                implementation of three components:
+                My role in traffic control optimization consisted primarily of
+                the implementation of three components:
             </p>
 
             <ul>
                 <li className={styles.trafficControlItem}>
                     <p className={styles.trafficControlDescription}>
-                        A heuristic logic for dynamically changing stages
-                        durations of traffic light based on flow and saturation
-                        of street lanes considering different KPIs that
-                        incorporate these metrics.
+                        A heuristic logic for dynamically changing the duration
+                        of the <strong>stages of traffic lights</strong> based
+                        on data concerning the <strong>flow</strong> and{" "}
+                        <strong>occupancy</strong> of street lanes and
+                        generating different KPIs that incorporate these
+                        metrics.
+                        <br />
+                        <br />
+                        This included a judicious treatment of the data quality
+                        due to street conditions, camera malfunctions etc.
+                        <br />
+                        <br />
+                        Furthermore, in order to estimate geometric parameters
+                        intrinsic to those streets and lanes that help identify
+                        saturation profiles (i.e., levels of congestion), we
+                        used different forms of <strong>
+                            curve-fitting
+                        </strong>{" "}
+                        based on the historical data, employing different
+                        strategies on how/when to update the parameters.
                     </p>
                     <div className={styles.image}>
                         <Image
@@ -147,12 +163,25 @@ function TrafficControl() {
                 </li>
                 <li className={styles.trafficControlItem}>
                     <p>
-                        An intricate MILP optimization model for optimizing
-                        traffic light offsets relative to each other to create
-                        optimized green waves across traffic grids, which is
-                        based on an interpretation of a cycle-consistent
-                        attribution of the offsets based on the vanishing of an
-                        integral 1-form on the cycles of the grid.
+                        An intricate <strong>MILP optimization model</strong>{" "}
+                        for optimizing traffic light offsets relative to each
+                        other to create optimized <strong>green waves </strong>
+                        across traffic grids, which is based on an
+                        interpretation of a cycle-consistent attribution of the
+                        offsets based on the vanishing of an integral 1-form on
+                        the 1-cycles of the grid when seen as a CW-complex.
+                        <br />
+                        <br />
+                        The algorithm was a vast generalization over well-known
+                        MILP approaches for optimizing a two-way street such as
+                        the one seen in{" "}
+                        <Link href="https://www.jstor.org/stable/168720">
+                            The Synchronization of Traffic Signals by Mixed
+                            Linear Programming
+                        </Link>
+                        , consisting also of transition techniques from one
+                        profile to another given the adaptive nature of the
+                        system.
                     </p>
                     <div className={styles.image}>
                         <Image
@@ -168,11 +197,23 @@ function TrafficControl() {
 
                 <li className={styles.trafficControlItem}>
                     <p>
-                        Integrating this as a service to connect with other
-                        services, including a front-end that is used by
-                        government agents as well as the other components that
-                        connect to the physical traffic controllers spread
+                        The integration of this as a service to connect with
+                        other services, including a{" "}
+                        <strong>
+                            front-end that is used by government agents
+                        </strong>{" "}
+                        as well as the other components that connect to the{" "}
+                        <strong>physical traffic controllers</strong> spread
                         around the city of Vitória - ES.
+                        <br />
+                        <br />I also monitored the real-time traffic control
+                        operation as a whole, making sure to maintain{" "}
+                        <strong>correct behavior</strong> and{" "}
+                        <strong>reliability</strong>.
+                        <br />
+                        <br />
+                        The diagram provides an overly-simplified view of the
+                        architecture in order to protect the IP of the company.
                     </p>
                     <div className={styles.image}>
                         <Image
