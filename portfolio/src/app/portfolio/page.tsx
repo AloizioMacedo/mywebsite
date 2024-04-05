@@ -247,17 +247,36 @@ function RoutingAlgorithms() {
     return (
         <div>
             <p>
-                This included different optimization algorithms such as Ant
-                Colony Optimization and simulated annealing for probabilistic
-                and heuristic approaches as well as MILP formulations and some
-                greedy approaches. The problems were further complications of
-                the Traveling Salesman Problem and Vehicle Routing Problem,
-                including constraints such as jobs dependencies, different job
-                durations, availability windows etc. The Ant Colony Optimization
-                was particularly involved and was further improved by a custom
-                low-level implementation of the logic, speeding up the runtime
-                by around 40 times compared to a naive implementation in Python.
+                We built solutions that served different sectors, including
+                clients in the Gas & Energy space as well as in the Pharma
+                industry, optimizing <strong>worker dispatching</strong> and{" "}
+                <strong>vehicle routing</strong>.
             </p>
+            <br />
+            <p>
+                The problems were further complications of the{" "}
+                <strong>Traveling Salesman Problem</strong> and{" "}
+                <strong>Vehicle Routing Problem</strong>, including constraints
+                such as jobs dependencies, different job durations, availability
+                windows etc.
+            </p>
+            <br />
+            <p>
+                They included different optimization algorithms such as{" "}
+                <strong>Ant Colony Optimization</strong> and{" "}
+                <strong>Simulated Annealing</strong> for probabilistic and
+                heuristic approaches as well as{" "}
+                <strong>MILP formulations</strong> and some greedy approaches.
+            </p>
+            <br />
+            <p>
+                The Ant Colony Optimization implementation was particularly
+                involved due to the need of several time-specific and coupled
+                constraints, and was further improved by a custom low-level
+                implementation of the logic, speeding up the runtime by around
+                40 times compared to a naive implementation in Python.
+            </p>
+            <br />
             <p>
                 The plot below (which can also be seen in the homepage) is a
                 visualization of iterations towards a solution of the classical
