@@ -24,6 +24,14 @@
     margin-left: 100px;
 }
 
+.schedulingList {
+    margin: 20px;
+}
+
+.schedulingList li {
+    margin-block: 20px;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
     .trafficControlItem {

@@ -232,14 +232,58 @@ function TrafficControl() {
 
 function WorkforceScheduling() {
     return (
-        <p>
-            Workforce Scheduling: Generating optimized schedules given a
-            historic demand timeseries together with its forecasting. The
-            solution includes consideration of ASA (Average Speed of Answer),
-            SLAs (Service Level Agreements), the possibility to postpone demand
-            to future points in time etc. Optimization is phrased in terms of a
-            MILP.
-        </p>
+        <div>
+            <p>
+                Across different sectors of the industry, such as{" "}
+                <strong>call centers</strong> and <strong>back-offices</strong>,
+                there is a lot of opportunity around correctly allocating people
+                to handle incoming demand.
+            </p>
+            <br />
+            <p>
+                The general process for scheduling optimization that I was
+                involved with consisted of three major steps:
+            </p>
+            <ul className={styles.schedulingList}>
+                <li>
+                    <strong>Demand Forecasting</strong>: In order to effectively
+                    prepare for the demand of upcoming weeks, it is necessary to
+                    have a reasonable expectation of how the demand profile will
+                    be. By using a concoction of forecasting tools (such as{" "}
+                    <strong>Prophet</strong>, <strong>TBATS</strong> etc) and
+                    given that the seasonal behavior of demand is usually rather
+                    stable in those business segments, we were able to prepare
+                    ahead with a remarkable accuracy.
+                </li>
+                <li>
+                    <strong>Schedules Generation</strong>: Given alignment with
+                    the business, we established constraints for the possible
+                    schedules that can be assigned headcount by our optimization
+                    process. Those constraints include things such as start
+                    times, shift lengths, break times, etc. Then, we need to
+                    generate the entire combinatoric result of those
+                    constraints, making sure they are self-consistent, and
+                    generate the possible schedules that can be fed into the
+                    optimizer.
+                </li>
+                <li>
+                    <strong>Headcount Optimization</strong>: After setting those
+                    basic inputs (the <strong>demand</strong> and the
+                    constraints on the <strong>supply</strong>), we proceed to
+                    the optimization step to obtain the headcounts, which
+                    consists of a{" "}
+                    <strong>Mixed-Integer Linear Programming</strong> step that
+                    can incorporate several parameters such as SLA (Service
+                    Level Agreements), headcount constraints, demand smoothing
+                    etc.
+                </li>
+            </ul>
+            <p>
+                Ultimately, the process allows us to shuffle and rescale
+                headcount for different roles and job types ensuring optimized
+                allocation of resources.
+            </p>
+        </div>
     );
 }
 
@@ -247,10 +291,11 @@ function RoutingAlgorithms() {
     return (
         <div>
             <p>
-                We built solutions that served different sectors, including
-                clients in the Gas & Energy space as well as in the Pharma
-                industry, optimizing <strong>worker dispatching</strong> and{" "}
-                <strong>vehicle routing</strong>.
+                I developed solutions that optimized{" "}
+                <strong>worker dispatching</strong> and{" "}
+                <strong>vehicle routing</strong> for different sectors,
+                including clients in the Gas & Energy space as well as in the
+                Pharma industry.
             </p>
             <br />
             <p>
